@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# React App (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Setting up frontend on local
 
-## Available Scripts
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Download this project folder either as zip file and extract the folders into the desired directory or clone this repository on your local machine 
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Navigate into the app and install all required packages by running the following command in the project directory:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**`npm i`**
 
-### `npm test`
+Make sure a `node_modules` folder appears in the project directory after successful completion of the above command.
 
-Launches the test runner in the interactive watch mode.\
+Next, run the app in your local browser by running the following command in the project directory:
+
+**`npm start`**
+
+It runs the app in the development mode.<br />
+
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br />
+
+You will also see any lint errors in the console.
+
+### For Testing
+
+**`npm test`**
+
+Launches the test runner in the interactive watch mode.<br />
+
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### For Deployment
 
-Builds the app for production to the `build` folder.\
+**`npm run build`**
+
+Builds the app for production to the `build` folder.<br />
+
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The build is minified and the filenames include the hashes.<br />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Your app is ready to be deployed! See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Folder Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Overview
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The root directory contains main files such as index.js, app.js, app.css and global stylesheet
 
-## Learn More
+-*src*													root directory for frontend
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+​	--*assets*											  all common assets
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+​		---*img*									      common images used throughout the app
 
-### Code Splitting
+​		---*favicon.ico*								 getwork favicon 							
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+​	--*bundles*											all project module bundles
 
-### Analyzing the Bundle Size
+​		---*common*									    common modules 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+​			----*components*						    common components
 
-### Making a Progressive Web App
+​				-----*UI*								common UI elements composed as reusable components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+​				-----*Auth*								 components handling authentication
 
-### Advanced Configuration
+​					-------*Login.js*					  common login component
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+​					-------*Login.css*					styles for login component
 
-### Deployment
+​		---*company*									 company module
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+​			----*components*						   company specific components
 
-### `npm run build` fails to minify
+​			----*contexts*								context managing company's state data
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+​			----*reducers*								reducers for company's state data
+
+​			----*routes*							    slugs for company module
+
+​		---*student*								    student module
+
+​			----*components*						    student specific components
+
+​			----*contexts*								context managing student's state data
+
+​			----*reducers*								 reducers for student's state data
+
+​			----*routes*								slugs for student module
+
+​		
+
+## External Libraries used 
+
+### via npm
+
+This section briefly describes all the external libraries used in this project. In case they are depreciated or unmaintained as of this date, upgrade them to latest version and update their code. 
+
+react-router-dom   		v5.1.2 
+
+### via CDN
+
+Bootstrap 4 								v4.0.0.0
+
+Bootstrap 4 floating label
+
+Font Awesome
